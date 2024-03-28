@@ -21,6 +21,11 @@ def get_browser():
         options=options
     )
 
+    browser.config.window_height = 1080  # задает высоту окна браузера
+    browser.config.window_width = 1920
+
     browser.config.driver = driver
 
     yield
+
+    browser.quit()
